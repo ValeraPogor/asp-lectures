@@ -1,0 +1,15 @@
+﻿@model  Feedback.Models.FeedbackModel
+
+<h2>Add feedback</h2>
+<form role="form" method="POST" action="@Url.Action("Save")">
+    <div class="form-group">
+        @Html.LabelFor(x => x.UserName)
+        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", placeholder = "Enter your name" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Feedback)
+        @Html.TextBoxFor(x => x.Feedback, new { @class = "form-control", placeholder = "Enter feedback" })
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
